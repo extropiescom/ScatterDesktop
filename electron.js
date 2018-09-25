@@ -5,6 +5,9 @@ const url = require("url");
 const Transport = require('@ledgerhq/hw-transport-node-hid');
 global.appShared = { Transport };
 
+const EOSGetAddress = require("./solo/dllimport/EOSGetAddress");
+const EOSTXSign = require("./solo/dllimport/EOSTXSign");
+global.services = { EOSGetAddress, EOSTXSign };
 let tray = null;
 let win = null;
 
